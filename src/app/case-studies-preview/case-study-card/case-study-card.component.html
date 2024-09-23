@@ -1,0 +1,12 @@
+<div class="px-5 pt-3 case-study-card">
+    <div>
+        <span class="title" [innerHTML]="caseStudy.name"></span>
+    </div>
+    <div class="py-2">
+        <span *ngFor="let type of caseStudy.types; index as i">
+            <ng-container *ngIf="i !== (caseStudy.types.length - 1); else lastItem">{{type}} • </ng-container>
+            <ng-template #lastItem>{{type}}</ng-template>
+        </span>
+    </div>
+    <img class="img-fluid" [src]="caseStudy.img">
+</div>
