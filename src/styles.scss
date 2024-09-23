@@ -19,6 +19,11 @@ p {
     }
 }
 
+.bg-dark {
+    background-color: $dark-bg !important;
+    color: $dark-bg-txt;
+}
+
 .divider {
     background-color: $divider-bg; 
     height: 2px; 

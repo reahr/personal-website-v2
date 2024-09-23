@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { CaseStudiesPreviewComponent } from './case-studies-preview/case-studies-preview.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { CaseStudyCardComponent } from './case-studies-preview/case-study-card/case-study-card.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CaseStudyCardComponent } from './case-studies-preview/case-study-card/c
     HeaderComponent,
     CaseStudiesPreviewComponent,
     AboutMeComponent,
-    CaseStudyCardComponent
+    CaseStudyCardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
