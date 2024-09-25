@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-dark py-4" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg fixed-top bg-dark py-4" data-bs-theme="dark">
     <div class="container">
-      <a class="navbar-brand hidden-logo" routerLink="/">
+      <a data-bs-target="#navbarTogglerDemo02" data-bs-toggle="collapse" class="navbar-brand hidden-logo" routerLink="/">
         <img class="logo" src="assets/img/logo-toro.svg">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,7 +9,7 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center">
             <li class="nav-item pe-lg-5">
-                <a class="nav-link" aria-current="page" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Work</a>
+                <a data-bs-target="#navbarTogglerDemo02" data-bs-toggle="collapse" class="nav-link" aria-current="page" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Work</a>
             </li>
             <li class="nav-item d-lg-block d-none">
                 <a routerLink="/">
@@ -17,7 +17,7 @@
                 </a>
             </li>
             <li class="nav-item ps-lg-5">
-                <a class="nav-link" aria-current="page" routerLink="/about" routerLinkActive="active-link">About</a>
+                <a data-bs-target="#navbarTogglerDemo02" data-bs-toggle="collapse" class="nav-link" aria-current="page" routerLink="/about" routerLinkActive="active-link">About</a>
             </li>
           <!-- <li class="nav-item">
             <a class="nav-link disabled" aria-disabled="true">Disabled</a>
