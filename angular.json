@@ -147,7 +147,9 @@
           "builder": "@nguniversal/builders:prerender",
           "options": {
             "routes": [
-              "/"
+              "/",
+              "/about",
+              "/links"
             ]
           },
           "configurations": {
