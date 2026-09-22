@@ -34,6 +34,11 @@ export class LinksComponent {
       alt: 'DIY Tile Coasters project card: ceramic tiles turned into tropical coasters',
       image: 'assets/img/projects/tile-coasters-diy.png',
       href: LINK_REDIRECTS['tile-coasters-diy']
+    },
+    {
+      alt: 'The Ultimate Grinchmas Gift Box project card: DIY holiday gift box supplies',
+      image: 'assets/img/projects/grinchmas-gift-box.webp',
+      href: LINK_REDIRECTS['grinchmas-party-box']
     }
   ];
 }
