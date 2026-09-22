@@ -8,6 +8,7 @@ import { CaseStudiesPreviewComponent } from './case-studies-preview/case-studies
 import { AboutMeComponent } from './about-me/about-me.component';
 import { CaseStudyCardComponent } from './case-studies-preview/case-study-card/case-study-card.component';
 import { FooterComponent } from './footer/footer.component';
+import { LinksComponent } from './links/links.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './footer/footer.component';
     CaseStudiesPreviewComponent,
     AboutMeComponent,
     CaseStudyCardComponent,
-    FooterComponent
+    FooterComponent,
+    LinksComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

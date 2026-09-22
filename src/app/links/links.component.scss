@@ -1,0 +1,141 @@
+@import "brand";
+
+:host {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.links-page {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: clamp(32px, 8vw, 72px) clamp(4px, 6vw, 16px);
+}
+
+.links-card {
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(28px, 5vw, 40px);
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+
+    h1 {
+        margin: 0;
+        font-style: italic;
+        font-weight: 500;
+        font-size: clamp(32px, 7vw, 48px);
+        line-height: 1.167;
+        color: $light-bg-txt;
+
+        .normal {
+            font-style: normal;
+        }
+    }
+
+    p {
+        margin: 0;
+        max-width: 400px;
+        font-size: 16px !important;
+        font-weight: 400;
+        line-height: 1.6;
+        color: #6b7075;
+    }
+}
+
+.link-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.rd-link {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px 24px;
+    background: $card-bg;
+    border: 1px solid #d9d9d9;
+    border-radius: 15px;
+    transition: background 0.15s ease, border-color 0.15s ease;
+
+    .rd-link-label {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 500;
+        font-size: 17px;
+        color: $light-bg-txt;
+    }
+
+    .rd-link-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
+    .rd-link-arrow {
+        stroke: $lilac-accent;
+        transition: transform 0.15s ease;
+    }
+
+    &:hover {
+        background: $lilac-bg;
+        border-color: $lilac-accent;
+
+        .rd-link-arrow {
+            transform: translateX(4px);
+        }
+    }
+}
+
+.social-list {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 8px;
+}
+
+.rd-social {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    background: $lilac-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $lilac-deep;
+    transition: background 0.15s ease, color 0.15s ease;
+
+    svg {
+        fill: currentColor;
+    }
+
+    &:hover {
+        background: $lilac-accent;
+        color: #fff;
+    }
+}
+
+.footnote {
+    margin: 4px 0 0 0;
+    font-size: 13px !important;
+    color: #9a9a9a;
+    text-align: center;
+}
