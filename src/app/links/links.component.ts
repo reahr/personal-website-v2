@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LINK_REDIRECTS } from './link-redirects';
 
 interface LinkItem {
   label: string;
@@ -6,6 +7,12 @@ interface LinkItem {
   routerLink?: string;
   external?: boolean;
   icon?: string;
+}
+
+interface ProjectCard {
+  alt: string;
+  image: string;
+  href: string;
 }
 
 @Component({
@@ -20,5 +27,13 @@ export class LinksComponent {
     { label: 'Etsy', external: true, href: 'https://etsy.com/shop/TaurestiaDesignShop', icon: 'assets/img/icons/etsy.png' },
     // { label: 'Work', routerLink: '/' },
     // { label: 'Resume', href: '#' }
+  ];
+
+  projects: ProjectCard[] = [
+    {
+      alt: 'DIY Tile Coasters project card: ceramic tiles turned into tropical coasters',
+      image: 'assets/img/projects/tile-coasters-diy.png',
+      href: LINK_REDIRECTS['tile-coasters-diy']
+    }
   ];
 }

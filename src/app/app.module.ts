@@ -9,6 +9,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { CaseStudyCardComponent } from './case-studies-preview/case-study-card/case-study-card.component';
 import { FooterComponent } from './footer/footer.component';
 import { LinksComponent } from './links/links.component';
+import { LinkRedirectComponent } from './link-redirect/link-redirect.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LinksComponent } from './links/links.component';
     AboutMeComponent,
     CaseStudyCardComponent,
     FooterComponent,
-    LinksComponent
+    LinksComponent,
+    LinkRedirectComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

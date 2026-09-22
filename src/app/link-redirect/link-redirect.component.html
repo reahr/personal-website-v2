@@ -1,0 +1,10 @@
+<div class="redirect-page">
+  <ng-container *ngIf="target; else notFound">
+    <p>Redirecting you now&hellip;</p>
+    <a [href]="target">Click here if you're not redirected automatically.</a>
+  </ng-container>
+  <ng-template #notFound>
+    <p>This link doesn't exist.</p>
+    <a routerLink="/links">Back to links</a>
+  </ng-template>
+</div>

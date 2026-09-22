@@ -1,0 +1,25 @@
+@import "brand";
+
+:host {
+    display: block;
+    min-height: 60vh;
+}
+
+.redirect-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: clamp(48px, 12vw, 96px) 20px;
+    text-align: center;
+
+    p {
+        font-size: 16px !important;
+        color: $light-bg-txt;
+    }
+
+    a {
+        color: $lilac-deep;
+    }
+}

@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { CaseStudiesPreviewComponent } from './case-studies-preview/case-studies-preview.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { LinksComponent } from './links/links.component';
+import { LinkRedirectComponent } from './link-redirect/link-redirect.component';
 
 const routes: Routes = [
   { path: '', component: CaseStudiesPreviewComponent },
   { path: 'about', component: AboutMeComponent },
-  { path: 'links', component: LinksComponent, data: { noIndex: true, hideFooter: true, hideNavLinks: true } }
+  { path: 'links', component: LinksComponent, data: { noIndex: true, hideFooter: true, hideNavLinks: true } },
+  { path: 'links/:slug', component: LinkRedirectComponent, data: { noIndex: true, hideFooter: true, hideNavLinks: true } }
 ];
 
 @NgModule({

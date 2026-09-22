@@ -105,6 +105,44 @@ a {
     }
 }
 
+.project-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    h2 {
+        margin: 0;
+        text-align: center;
+        font-style: italic;
+        font-weight: 500;
+        font-size: 24px;
+        color: $light-bg-txt;
+    }
+}
+
+.rd-project-card {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #d9d9d9;
+    transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    &:hover {
+        border-color: $lilac-accent;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(87, 58, 153, 0.12);
+    }
+}
+
 .social-list {
     display: flex;
     align-items: center;
