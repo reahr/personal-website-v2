@@ -12,7 +12,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng run reah-website-v2:prerender` to build the project. The build artifacts will be stored in the `dist/` directory. Copy /browser items over to gh-pages branch. 
 
 ## Running unit tests
 
