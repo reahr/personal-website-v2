@@ -1,0 +1,13 @@
+@import "brand";
+@import "case-study";
+
+:host {
+    display: block;
+    --cs-bg: #faf5ed;
+    --cs-ink: #2b2622;
+    --cs-muted: #6e625a;
+    --cs-accent: #a8492f;
+    --cs-card-bg: #f3e8d9;
+    --cs-border: #e3d6c6;
+    --cs-th-bg: #f3e8d9;
+}

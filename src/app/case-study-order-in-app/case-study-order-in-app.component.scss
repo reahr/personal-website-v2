@@ -1,0 +1,72 @@
+@import "brand";
+@import "case-study";
+
+:host {
+    display: block;
+    --cs-bg: #f9f6f1;
+    --cs-ink: #2b2521;
+    --cs-muted: #6b5d55;
+    --cs-accent: #81503f;
+    --cs-card-bg: #f0e7df;
+    --cs-border: #d8cfc5;
+    --cs-th-bg: #f0e7df;
+}
+
+.cs-persona-media {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+
+    img {
+        width: 96px;
+        height: 96px;
+        object-fit: cover;
+        border-radius: 12px;
+        flex-shrink: 0;
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .cs-persona-media {
+        display: block;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            border-radius: 15px;
+        }
+
+        p {
+            margin-top: 14px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .cs-compare {
+        align-items: start;
+
+        img {
+            height: 420px;
+            width: 100%;
+            object-fit: contain;
+            background: #fff;
+        }
+    }
+}
+
+.cs-band-problem { background: #d9c3b0; }
+.cs-band-goal { background: #dfe0d2; }
+.cs-band-outcome { background: #e5d6c6; }
+.cs-band-discovered { background: #dfe0d2; }
+.cs-band-round2 { background: #dfe0d2; }
+.cs-band-round1 { background: #e5d6c6; }

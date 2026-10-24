@@ -10,6 +10,10 @@ import { CaseStudyCardComponent } from './case-studies-preview/case-study-card/c
 import { FooterComponent } from './footer/footer.component';
 import { LinksComponent } from './links/links.component';
 import { LinkRedirectComponent } from './link-redirect/link-redirect.component';
+import { CaseStudyOrderInAppComponent } from './case-study-order-in-app/case-study-order-in-app.component';
+import { CaseStudyQuickWrapGiftsComponent } from './case-study-quick-wrap-gifts/case-study-quick-wrap-gifts.component';
+import { CaseStudySillageComponent } from './case-study-sillage/case-study-sillage.component';
+import { DesignProcessComponent } from './design-process/design-process.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { LinkRedirectComponent } from './link-redirect/link-redirect.component';
     CaseStudyCardComponent,
     FooterComponent,
     LinksComponent,
-    LinkRedirectComponent
+    LinkRedirectComponent,
+    CaseStudyOrderInAppComponent,
+    CaseStudyQuickWrapGiftsComponent,
+    CaseStudySillageComponent,
+    DesignProcessComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

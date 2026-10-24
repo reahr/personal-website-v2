@@ -1,0 +1,310 @@
+// Shared layout/typography for case study detail pages.
+// Each case-study component sets the --cs-* custom properties on :host
+// to its own palette, then imports this partial for the shared classes.
+
+.cs-page {
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--cs-bg);
+    color: var(--cs-ink);
+    font-family: "Poppins", system-ui, sans-serif;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-sizing: border-box;
+    }
+}
+
+.cs-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 500;
+}
+
+.cs-wrap {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 clamp(20px, 5vw, 48px);
+}
+
+.cs-sec {
+    padding-top: clamp(40px, 7vw, 72px);
+    padding-bottom: clamp(40px, 7vw, 72px);
+}
+
+.cs-back {
+    display: inline-block;
+    font-size: 13px;
+    color: var(--cs-accent);
+    font-weight: 500;
+}
+
+.cs-hero {
+    padding-top: clamp(32px, 6vw, 64px);
+    padding-bottom: clamp(32px, 6vw, 64px);
+}
+
+.cs-hero-label {
+    margin: 0 0 12px 0;
+}
+
+.cs-hero h1 {
+    margin: 0 0 16px 0;
+    font-size: clamp(40px, 8vw, 72px);
+    line-height: 1.05;
+    text-align: left;
+}
+
+.cs-hero-dek {
+    margin: 0 0 14px 0;
+    font-style: italic;
+    font-size: clamp(17px, 2.6vw, 22px);
+    line-height: 1.5;
+}
+
+.cs-hero-byline {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.cs-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.cs-label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cs-accent);
+    margin: 0 0 12px 0;
+}
+
+.cs-h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(28px, 5vw, 42px);
+    line-height: 1.15;
+    margin: 0 0 clamp(24px, 4vw, 40px) 0;
+    color: var(--cs-ink);
+}
+
+.cs-p {
+    font-size: clamp(15px, 2.2vw, 17px);
+    line-height: 1.7;
+    margin: 0 0 14px 0;
+    color: var(--cs-ink);
+}
+
+.cs-muted {
+    color: var(--cs-muted);
+}
+
+.cs-g {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.cs-card {
+    border-radius: 15px;
+    padding: clamp(20px, 3vw, 28px);
+    box-sizing: border-box;
+    background: var(--cs-card-bg);
+
+    h3 {
+        margin: 0 0 8px 0;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.3;
+    }
+
+    p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+.cs-split {
+    display: grid;
+    gap: clamp(24px, 4vw, 48px);
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-sizing: border-box;
+    }
+}
+
+.cs-cap {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 10px;
+
+    b {
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 2px;
+    }
+}
+
+.cs-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.5;
+
+    th, td {
+        border: 1px solid var(--cs-border);
+        padding: 12px 14px;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    th {
+        background: var(--cs-th-bg);
+        font-weight: 500;
+    }
+}
+
+.cs-tablewrap {
+    overflow-x: auto;
+    border-radius: 12px;
+
+    .cs-table {
+        min-width: 640px;
+    }
+}
+
+.cs-btn {
+    display: inline-block;
+    padding: 13px 26px;
+    border-radius: 999px;
+    background: var(--cs-accent);
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+
+    &:hover {
+        filter: brightness(1.12);
+    }
+}
+
+.cs-btn-ghost {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 999px;
+    border: 1px solid var(--cs-accent);
+    color: var(--cs-accent);
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+
+    &:hover {
+        background: var(--cs-th-bg);
+    }
+}
+
+.cs-list {
+    margin: 0;
+    padding-left: 20px;
+
+    li {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 6px;
+    }
+}
+
+.cs-divider {
+    padding-top: clamp(48px, 9vw, 96px);
+    padding-bottom: clamp(48px, 9vw, 96px);
+
+    .cs-divider-num {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-style: italic;
+        font-weight: 500;
+        font-size: clamp(36px, 6vw, 56px);
+        color: var(--cs-accent);
+        line-height: 1;
+    }
+
+    h2 {
+        margin: 10px 0 10px 0;
+        font-size: clamp(30px, 6vw, 52px);
+        line-height: 1.1;
+    }
+
+    p {
+        margin: 0;
+        font-size: 15px;
+    }
+}
+
+.cs-closing {
+    text-align: center;
+    padding-top: clamp(44px, 8vw, 80px);
+    padding-bottom: clamp(44px, 8vw, 80px);
+
+    .cs-h2 {
+        margin-bottom: 16px;
+    }
+
+    .cs-p {
+        max-width: 620px;
+        margin: 0 auto 26px auto;
+    }
+
+    .cs-closing-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .cs-closing-contact {
+        margin: 22px 0 0 0;
+        font-size: 13px;
+        color: var(--cs-accent);
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .cs-g2, .cs-g3, .cs-g4, .cs-g5, .cs-g6 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .cs-g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .cs-g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .cs-g5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .cs-g6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+
+    .cs-split {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        &.cs-w1 { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+        &.cs-w2 { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+        &.cs-persona { grid-template-columns: 200px minmax(0, 1fr); gap: 40px; }
+    }
+}

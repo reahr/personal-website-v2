@@ -7,5 +7,9 @@ import { CaseStudy } from '../case-studies.service';
   styleUrls: ['./case-study-card.component.scss']
 })
 export class CaseStudyCardComponent {
-  @Input() caseStudy!: CaseStudy; 
+  @Input() caseStudy!: CaseStudy;
+
+  get isExternal(): boolean {
+    return /^https?:\/\//.test(this.caseStudy.href || '');
+  }
 }

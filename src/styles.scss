@@ -2,8 +2,12 @@
 @import "assets/scss/brand.scss";
 
 body {
-    font-family: $font-family-base; 
+    font-family: $font-family-base;
     color: $light-bg-txt;
+    /* Chrome's automatic scroll anchoring fights the app's own scroll-to-top
+       handling on route changes (it tries to keep the pre-navigation content
+       in the same visual position as the new, differently-sized page loads). */
+    overflow-anchor: none;
 }
 
 h1 {

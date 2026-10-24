@@ -14,10 +14,24 @@ li {
     font-size: $header-font-size;
 }
 
+@media screen and (min-width: 992px) {
+    li {
+        font-size: 13px;
+    }
+}
+
 .nav-link {
     color: $dark-bg-txt;
     position: relative;
     text-decoration: none;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 992px) {
+    .nav-link {
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
 }
 
 .nav-link:hover {

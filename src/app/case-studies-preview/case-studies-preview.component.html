@@ -1,18 +1,21 @@
-<h1 class="pt-3">Hi there, I'm <i>Reah</i>!</h1>
-<div class="headline-section">
-    <div class="d-flex align-items-center content text-center justify-content-center">
-        <div class="pt-3">
-           As a product manager, I transform customer needs, business goals, and market insights into successful products.
-        </div>
-        <div class="pt-3 pb-2">
-            Preview some of my work below. Case studies and more are coming soon!        
-        </div>
+<section class="hero">
+    <div class="eyebrow">
+        <span class="rule"></span>
+        <span class="eyebrow-text">Product Design&nbsp;/&nbsp;Product Management&nbsp;/&nbsp;Front-End Engineer</span>
+        <span class="rule"></span>
     </div>
-</div>
-<div>
-    <div class="row">
+    <h1><span class="normal">Hi there, I'm </span><i>Reah</i>!</h1>
+    <p class="lede">I design products and ship them. With roots in engineering and design, I lead the work from first research to launch, then measure what it moves.</p>
+</section>
+
+<section id="work" class="work-section">
+    <div class="work-header">
+        <h2>Selected <i>work</i></h2>
+        <span class="count">{{ caseStudyService.caseStudies.length }} case studies</span>
+    </div>
+    <div class="work-grid">
         <ng-container *ngFor="let item of caseStudyService.caseStudies">
-            <app-case-study-card class="col-12 col-lg-6 mt-4" [caseStudy]="item"></app-case-study-card>
+            <app-case-study-card [caseStudy]="item"></app-case-study-card>
         </ng-container>
     </div>
-</div>
+</section>

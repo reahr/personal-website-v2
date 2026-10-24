@@ -2,7 +2,7 @@
 
 <div style="top: 110px; position: relative">
   <main>
-    <div class="container pt-4 pb-5">
+    <div [class.container]="!fullBleed" [class.pt-4]="!fullBleed" [class.pb-5]="!fullBleed">
       <router-outlet></router-outlet>
     </div>
   </main>

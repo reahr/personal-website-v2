@@ -1,12 +1,35 @@
-<div class="px-5 pt-3 case-study-card">
-    <div>
-        <span class="title" [innerHTML]="caseStudy.name"></span>
-    </div>
-    <div class="py-2">
-        <span *ngFor="let type of caseStudy.types; index as i">
-            <ng-container *ngIf="i !== (caseStudy.types.length - 1); else lastItem">{{type}} • </ng-container>
-            <ng-template #lastItem>{{type}}</ng-template>
-        </span>
-    </div>
-    <img class="img-fluid" [src]="caseStudy.img">
+<div *ngIf="caseStudy.locked; else linkedCard" class="case-study-card locked" [title]="caseStudy.lockedNote" tabindex="0">
+    <ng-container *ngTemplateOutlet="cardContent"></ng-container>
 </div>
+
+<ng-template #linkedCard>
+    <a *ngIf="caseStudy.routerLink; else hrefLink" class="case-study-card" [routerLink]="caseStudy.routerLink">
+        <ng-container *ngTemplateOutlet="cardContent"></ng-container>
+    </a>
+    <ng-template #hrefLink>
+        <a class="case-study-card" [href]="caseStudy.href || '#'" [attr.target]="isExternal ? '_blank' : null" [attr.rel]="isExternal ? 'noopener' : null">
+            <ng-container *ngTemplateOutlet="cardContent"></ng-container>
+        </a>
+    </ng-template>
+</ng-template>
+
+<ng-template #cardContent>
+    <div class="card-image" [class.placeholder]="!caseStudy.img" [style.background]="!caseStudy.img ? caseStudy.placeholderColor : null">
+        <img *ngIf="caseStudy.img" [src]="caseStudy.img" [alt]="caseStudy.name">
+        <span *ngIf="!caseStudy.img" class="placeholder-label">{{ caseStudy.placeholderLabel }}</span>
+    </div>
+    <div class="card-body">
+        <span class="tag">
+            <ng-container *ngFor="let type of caseStudy.types; index as i">
+                <ng-container *ngIf="i !== (caseStudy.types.length - 1); else lastItem">{{type}} &middot; </ng-container>
+                <ng-template #lastItem>{{type}}</ng-template>
+            </ng-container>
+        </span>
+        <h3>{{ caseStudy.name }}</h3>
+        <p *ngIf="caseStudy.description">{{ caseStudy.description }}</p>
+        <span *ngIf="!caseStudy.locked; else lockedCta" class="cta">View case study <span class="arrow">&#8594;</span></span>
+        <ng-template #lockedCta>
+            <span class="cta locked-cta">This case study is under NDA, but I'd love to chat about it &mdash; reach out anytime!</span>
+        </ng-template>
+    </div>
+</ng-template>

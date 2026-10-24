@@ -8,20 +8,26 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center">
-            <li class="nav-item pe-lg-5" *ngIf="showNavLinks">
-                <a data-bs-target="#navbarTogglerDemo02" data-bs-toggle="collapse" class="nav-link" aria-current="page" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Work</a>
+            <li class="nav-item px-lg-3" *ngIf="showNavLinks">
+                <a data-bs-target="#navbarTogglerDemo02" data-bs-toggle="collapse" class="nav-link" aria-current="page" [routerLink]="['/']" fragment="work" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Work</a>
             </li>
-            <li class="nav-item d-lg-block d-none">
+            <li class="nav-item px-lg-3" *ngIf="showNavLinks">
+                <a data-bs-target="#navbarTogglerDemo02" data-bs-toggle="collapse" class="nav-link" aria-current="page" routerLink="/design-process" routerLinkActive="active-link">Design Process</a>
+            </li>
+            <li class="nav-item d-lg-block d-none px-lg-3">
                 <a routerLink="/">
-                    <img class="logo" src="assets/img/logo-toro.svg">
+                    <img class="logo" src="assets/img/logo-toro.svg" alt="RD monogram">
                 </a>
             </li>
-            <li class="nav-item ps-lg-5" *ngIf="showNavLinks">
+            <li class="nav-item px-lg-3" *ngIf="showNavLinks">
                 <a data-bs-target="#navbarTogglerDemo02" data-bs-toggle="collapse" class="nav-link" aria-current="page" routerLink="/about" routerLinkActive="active-link">About</a>
             </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li> -->
+            <li class="nav-item px-lg-3" *ngIf="showNavLinks">
+                <a class="nav-link" href="assets/docs/Reah_Rajmangal_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+            </li>
+            <!-- <li class="nav-item px-lg-3" *ngIf="showNavLinks">
+                <a data-bs-target="#navbarTogglerDemo02" data-bs-toggle="collapse" class="nav-link" href="#random">Random</a>
+            </li> -->
         </ul>
       </div>
     </div>
