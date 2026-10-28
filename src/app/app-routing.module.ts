@@ -12,10 +12,10 @@ import { DesignProcessComponent } from './design-process/design-process.componen
 const routes: Routes = [
   { path: '', component: CaseStudiesPreviewComponent },
   { path: 'about', component: AboutMeComponent },
-  { path: 'design-process', component: DesignProcessComponent, data: { fullBleed: true } },
-  { path: 'work/order-in-app', component: CaseStudyOrderInAppComponent, data: { fullBleed: true } },
-  { path: 'work/quick-wrap-gifts', component: CaseStudyQuickWrapGiftsComponent, data: { fullBleed: true } },
-  { path: 'work/sillage', component: CaseStudySillageComponent, data: { fullBleed: true } },
+  { path: 'design-process', component: DesignProcessComponent, data: { fullBleed: true, title: 'Design Process | Reah Rajmangal' } },
+  { path: 'work/order-in-app', component: CaseStudyOrderInAppComponent, data: { fullBleed: true, title: 'Case Study: L\'Artusi Dine-In | Reah Rajmangal' } },
+  { path: 'work/quick-wrap-gifts', component: CaseStudyQuickWrapGiftsComponent, data: { fullBleed: true, title: 'Case Study: Quickwrap Gifts | Reah Rajmangal' } },
+  { path: 'work/sillage', component: CaseStudySillageComponent, data: { fullBleed: true, title: 'Case Study: Sillage | Reah Rajmangal' } },
   { path: 'links', component: LinksComponent, data: { noIndex: true, hideFooter: true, hideNavLinks: true } },
   { path: 'links/:slug', component: LinkRedirectComponent, data: { noIndex: true, hideFooter: true, hideNavLinks: true } }
 ];

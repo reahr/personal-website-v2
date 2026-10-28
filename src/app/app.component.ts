@@ -1,6 +1,6 @@
 import { Component, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter, map, mergeMap } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
@@ -16,6 +16,8 @@ export class AppComponent implements OnDestroy {
   hideNavLinks = false;
   fullBleed = false;
 
+  private readonly defaultTitle = 'Reah Rajmangal';
+
   private routeSub: Subscription;
   private navEndSub: Subscription;
 
@@ -23,6 +25,7 @@ export class AppComponent implements OnDestroy {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private meta: Meta,
+    private titleService: Title,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
 
@@ -50,6 +53,8 @@ export class AppComponent implements OnDestroy {
       this.hideFooter = !!data['hideFooter'];
       this.hideNavLinks = !!data['hideNavLinks'];
       this.fullBleed = !!data['fullBleed'];
+
+      this.titleService.setTitle(data['title'] || this.defaultTitle);
 
       if (data['noIndex']) {
         this.meta.updateTag({
