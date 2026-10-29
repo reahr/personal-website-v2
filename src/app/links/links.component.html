@@ -29,6 +29,16 @@
 
     <div class="project-section" *ngIf="projects.length">
       <h2>Amazon Favorites</h2>
+      <a class="rd-project-card rd-gift-tags-card" [href]="giftTagsHref" target="_blank" rel="noopener" aria-label="DIY Foil Gift Tags: shop the supplies">
+        <span class="gt-ring gt-ring-solid"></span>
+        <span class="gt-ring gt-ring-dashed"></span>
+        <span class="gt-photo"><img src="assets/img/projects/foil-gift-tags.jpg" alt="Finished foil gift tag with ribbon"></span>
+        <span class="gt-badge">Cricut + Basic Materials</span>
+        <span class="gt-copy">
+          <span class="gt-title">DIY Foil Gift Tags</span>
+          <span class="gt-cta">Shop the supplies <span aria-hidden="true">&rarr;</span></span>
+        </span>
+      </a>
       <a class="rd-project-card" *ngFor="let project of projects" [href]="project.href" target="_blank" rel="noopener">
         <img [src]="project.image" [alt]="project.alt">
       </a>

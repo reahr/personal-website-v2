@@ -29,6 +29,8 @@ export class LinksComponent {
     // { label: 'Resume', href: '#' }
   ];
 
+  giftTagsHref = 'https://amzn.to/3WfjxCr';
+
   projects: ProjectCard[] = [
     {
       alt: 'DIY Tile Coasters project card: ceramic tiles turned into tropical coasters',
